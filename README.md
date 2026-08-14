@@ -2,7 +2,7 @@
 
 # Enterprise ISO 27001:2022 Readiness & Audit Case Study
 
-### Client Context: PayBridges SaaS (Cloud-Native Global HR & Payroll Platform)
+### Client Context: PayBridges SaaS (Fictional Cloud-Native Global HR & Payroll Platform)
 
 > **Role:** Lead Technology Risk Advisory Consultant (Tech Advisory)  
 > **Target Frameworks:** ISO/IEC 27001:2022, ISO/IEC 27005, SOC 2 Type II (Trust Services Criteria)  
