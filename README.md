@@ -1,6 +1,4 @@
-# paybridges-iso27001-readiness-case-study
-
-# Enterprise ISO 27001:2022 Readiness & Audit Case Study
+# PayBridges ISO 27001:2022 Readiness & Audit Case Study
 
 ### Client Context: PayBridges SaaS (Fictional Cloud-Native Global HR & Payroll Platform)
 
