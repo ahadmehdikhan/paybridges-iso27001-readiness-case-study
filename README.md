@@ -13,14 +13,14 @@
 
 This repository contains an audit-grade **ISMS Implementation & Security Readiness Case Study** for **PayBridges**, a fast-growing B2B SaaS platform handling sensitive enterprise employee PII, banking records, and payroll data. 
 
-As the Lead Technology Risk Advisory Consultant, I executed a end-to-end ISO 27001:2022 readiness assessment, designed control governance policies, conducted technical risk scoring, constructed Big 4-style audit workpapers, and developed remediation plans (CAPA) for control deficiencies.
+As the Lead Technology Risk Advisory Consultant, I executed an end-to-end ISO 27001:2022 readiness assessment, designed control governance policies, conducted technical risk scoring, constructed Big 4-style audit workpapers, and developed remediation plans (CAPA) for control deficiencies.
 
 ---
 
 ## Target Organization Profile: PayBridges SaaS
 
 * **Industry:** Cloud-Native Fintech / HR Technology
-* **Core Product:** Automated global payroll processing and employee records management
+* **Core Product:** Automated global payroll processing and employee records management (HR Platform)
 * **Headcount:** ~120 Employees (55% Engineering & DevOps)
 * **Infrastructure:** 100% AWS (Amazon RDS, S3, ECS Containers, AWS KMS), Okta SSO, Enterprise GitHub CI/CD pipelines
 * **Compliance Drivers:** Enterprise customer security questionnaires, SOC 2 Type II alignment, and ISO/IEC 27001:2022 certification readiness
