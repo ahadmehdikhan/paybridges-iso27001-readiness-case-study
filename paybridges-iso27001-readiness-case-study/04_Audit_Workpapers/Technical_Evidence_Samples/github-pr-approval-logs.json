@@ -1,0 +1,113 @@
+{
+  "evidence_type": "GitHub Enterprise Audit Log Export - Pull Request Approvals",
+  "evidence_reference": "ToE-02, ToD-02, Control A.8.32",
+  "export_scope": "payments-worker, payroll-engine, auth-service repositories",
+  "export_period": "2025-09-01 to 2026-02-28",
+  "note": "Redacted sample extract for audit workpaper purposes. Usernames and commit SHAs are synthetic/redacted.",
+  "records": [
+    {
+      "repository": "payroll-engine",
+      "pr_number": 4821,
+      "title": "Fix rounding error in bi-weekly disbursement calculation",
+      "author": "eng-redacted-014",
+      "base_branch": "main",
+      "required_approvals": 1,
+      "approvals": [
+        {
+          "reviewer": "eng-redacted-032",
+          "state": "APPROVED",
+          "timestamp": "2025-11-04T14:22:11Z"
+        }
+      ],
+      "status_checks": {
+        "build": "success",
+        "unit_tests": "success",
+        "sast_scan": "success"
+      },
+      "merged": true,
+      "merged_by": "eng-redacted-014",
+      "merge_timestamp": "2025-11-04T14:25:03Z",
+      "branch_protection_enforced": true
+    },
+    {
+      "repository": "auth-service",
+      "pr_number": 2210,
+      "title": "Rotate JWT signing key handling for session refresh",
+      "author": "eng-redacted-007",
+      "base_branch": "main",
+      "required_approvals": 2,
+      "approvals": [
+        {
+          "reviewer": "eng-redacted-002",
+          "state": "APPROVED",
+          "timestamp": "2025-12-01T09:14:55Z"
+        },
+        {
+          "reviewer": "eng-redacted-019",
+          "state": "APPROVED",
+          "timestamp": "2025-12-01T10:02:31Z"
+        }
+      ],
+      "status_checks": {
+        "build": "success",
+        "unit_tests": "success",
+        "sast_scan": "success",
+        "sca_scan": "success"
+      },
+      "merged": true,
+      "merged_by": "eng-redacted-007",
+      "merge_timestamp": "2025-12-01T10:05:47Z",
+      "branch_protection_enforced": true
+    },
+    {
+      "repository": "payments-worker",
+      "pr_number": 1188,
+      "title": "Add retry backoff logic for failed disbursement webhook",
+      "author": "eng-redacted-041",
+      "base_branch": "main",
+      "required_approvals": 2,
+      "approvals": [
+        {
+          "reviewer": "eng-redacted-009",
+          "state": "APPROVED",
+          "timestamp": "2026-01-14T16:40:02Z"
+        }
+      ],
+      "status_checks": {
+        "build": "success",
+        "unit_tests": "success",
+        "sast_scan": "success"
+      },
+      "merged": true,
+      "merged_by": "eng-redacted-041",
+      "merge_timestamp": "2026-01-14T16:41:19Z",
+      "branch_protection_enforced": false,
+      "auditor_note": "EXCEPTION - see ToE-02 / CAPA-04. This repository's branch protection had not yet been updated to require 2 approvals at time of merge; only 1 of 2 required approvals present."
+    },
+    {
+      "repository": "payroll-engine",
+      "pr_number": 4855,
+      "title": "Add parameterized query migration for legacy reporting module",
+      "author": "eng-redacted-014",
+      "base_branch": "main",
+      "required_approvals": 1,
+      "approvals": [
+        {
+          "reviewer": "eng-redacted-032",
+          "state": "APPROVED",
+          "timestamp": "2026-02-18T11:05:44Z"
+        }
+      ],
+      "status_checks": {
+        "build": "success",
+        "unit_tests": "success",
+        "sast_scan": "success"
+      },
+      "merged": true,
+      "merged_by": "eng-redacted-014",
+      "merge_timestamp": "2026-02-18T11:08:02Z",
+      "branch_protection_enforced": true,
+      "auditor_note": "Related to risk RR-20 remediation (SQL injection in legacy reporting module)."
+    }
+  ]
+}

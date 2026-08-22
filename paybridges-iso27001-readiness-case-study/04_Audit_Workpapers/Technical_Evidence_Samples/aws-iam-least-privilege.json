@@ -1,0 +1,90 @@
+{
+  "evidence_type": "AWS IAM Least-Privilege Policy Sample",
+  "evidence_reference": "ToD-10, ToE-01, Control A.8.2, A.8.3",
+  "export_scope": "Production AWS account - sample of role policies reviewed",
+  "export_date": "2026-02-20",
+  "note": "Redacted/synthetic sample extract for audit workpaper purposes. Account IDs and ARNs are synthetic.",
+  "roles_reviewed": [
+    {
+      "role_name": "jit-engineer-production-readonly",
+      "purpose": "Time-boxed JIT elevation role for engineers - read-only production access",
+      "max_session_duration_seconds": 14400,
+      "trust_policy_principal": "arn:aws:iam::[REDACTED]:role/okta-federation-role",
+      "attached_policy_summary": {
+        "effect": "Allow",
+        "actions": [
+          "rds-db:connect",
+          "s3:GetObject",
+          "logs:GetLogEvents",
+          "logs:FilterLogEvents"
+        ],
+        "resources": "scoped to production-readonly resource tags",
+        "conditions": {
+          "aws:MultiFactorAuthPresent": "true",
+          "aws:TokenIssueTime": "session-scoped"
+        }
+      },
+      "least_privilege_assessment": "Adequate - no write/delete actions present, MFA condition enforced"
+    },
+    {
+      "role_name": "jit-engineer-production-writeaccess",
+      "purpose": "Time-boxed JIT elevation role for approved incident response write access",
+      "max_session_duration_seconds": 14400,
+      "trust_policy_principal": "arn:aws:iam::[REDACTED]:role/okta-federation-role",
+      "attached_policy_summary": {
+        "effect": "Allow",
+        "actions": [
+          "rds-db:connect",
+          "ecs:UpdateService",
+          "logs:GetLogEvents"
+        ],
+        "resources": "scoped to production resource tags, excludes IAM/KMS admin actions",
+        "conditions": {
+          "aws:MultiFactorAuthPresent": "true",
+          "aws:RequestedRegion": [
+            "us-east-1",
+            "eu-west-1"
+          ]
+        }
+      },
+      "least_privilege_assessment": "Adequate - explicitly excludes IAM and KMS administrative actions; requires named on-call-lead approval to assume (workflow-enforced, outside IAM policy itself)"
+    },
+    {
+      "role_name": "ci-cd-deploy-role",
+      "purpose": "GitHub Actions OIDC-federated role used by CI/CD pipeline for production deploys",
+      "max_session_duration_seconds": 3600,
+      "trust_policy_principal": "token.actions.githubusercontent.com (OIDC, repo-scoped)",
+      "attached_policy_summary": {
+        "effect": "Allow",
+        "actions": [
+          "ecs:UpdateService",
+          "ecs:RegisterTaskDefinition",
+          "ecr:PutImage",
+          "ecr:BatchGetImage"
+        ],
+        "resources": "scoped to designated ECS clusters/ECR repos per service",
+        "conditions": {
+          "token.actions.githubusercontent.com:sub": "repo:paybridges/*:ref:refs/heads/main"
+        }
+      },
+      "least_privilege_assessment": "Adequate - trust policy restricts assumption to main-branch workflow runs only, preventing feature-branch deploys to production"
+    },
+    {
+      "role_name": "iam-admin-breakglass",
+      "purpose": "Break-glass account for emergency IAM administration",
+      "max_session_duration_seconds": 3600,
+      "trust_policy_principal": "root-account MFA-protected user, not federated",
+      "attached_policy_summary": {
+        "effect": "Allow",
+        "actions": [
+          "iam:*"
+        ],
+        "resources": "*",
+        "conditions": {
+          "aws:MultiFactorAuthPresent": "true"
+        }
+      },
+      "least_privilege_assessment": "Full-privilege by design (break-glass); compensating controls are hardware MFA token stored in a physical safe, dual-custody access procedure, and mandatory post-use incident report, per Access_Control_Policy.md exception handling."
+    }
+  ]
+}
