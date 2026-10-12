@@ -50,4 +50,4 @@ Establishes a consistent classification scheme so that information assets receiv
 
 | Version | Date | Change | Author |
 |---|---|---|---|
-| 1.0 | 2025-02-01 | Initial issuance | CISO |
+| 1.0 | 2026-02-01 | Initial issuance | CISO |
