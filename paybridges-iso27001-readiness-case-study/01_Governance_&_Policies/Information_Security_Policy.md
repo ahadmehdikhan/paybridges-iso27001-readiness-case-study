@@ -50,5 +50,5 @@ Violations are reported through the Information Security Event Reporting channel
 
 | Version | Date | Change | Author |
 |---|---|---|---|
-| 1.0 | 2025-01-15 | Initial policy issuance | CISO |
-| 1.1 | 2025-07-01 | Updated to reflect ISO/IEC 27001:2022 control set (from 2013) | CISO |
+| 1.0 | 2026-01-15 | Initial policy issuance | CISO |
+| 1.1 | 2026-07-01 | Updated to reflect ISO/IEC 27001:2022 control set (from 2013) | CISO |
