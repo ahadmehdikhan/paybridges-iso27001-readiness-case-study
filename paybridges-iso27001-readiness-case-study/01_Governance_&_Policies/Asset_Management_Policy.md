@@ -53,4 +53,4 @@ Remote-first workforce means the default working posture is off-premises. Endpoi
 
 | Version | Date | Change | Author |
 |---|---|---|---|
-| 1.0 | 2025-02-15 | Initial issuance | VP Engineering |
+| 1.0 | 2026-02-15 | Initial issuance | VP Engineering |
