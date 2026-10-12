@@ -55,5 +55,5 @@ Applies to all changes to production infrastructure (AWS), application source co
 
 | Version | Date | Change | Author |
 |---|---|---|---|
-| 1.0 | 2025-02-15 | Initial issuance | VP Engineering |
-| 1.1 | 2025-10-01 | Added two-approver requirement for payments/auth code paths | VP Engineering |
+| 1.0 | 2026-02-15 | Initial issuance | VP Engineering |
+| 1.1 | 2026-10-01 | Added two-approver requirement for payments/auth code paths | VP Engineering |
