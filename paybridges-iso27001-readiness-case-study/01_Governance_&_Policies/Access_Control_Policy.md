@@ -53,5 +53,5 @@ Any deviation from this policy (e.g., a legacy static credential still in use) m
 
 | Version | Date | Change | Author |
 |---|---|---|---|
-| 1.0 | 2025-02-01 | Initial issuance | Head of IT/Security |
-| 1.1 | 2025-09-10 | Added JIT elevation requirement following risk register finding RR-04 | Head of IT/Security |
+| 1.0 | 2026-02-01 | Initial issuance | Head of IT/Security |
+| 1.1 | 2026-07-10 | Added JIT elevation requirement following risk register finding RR-04 | Head of IT/Security |
